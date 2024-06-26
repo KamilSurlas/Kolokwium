@@ -1,0 +1,15 @@
+<form #mouseForm="ngForm" (ngSubmit)="onSubmit($event)">
+  <div>
+      <label for="model">Model</label>
+      <input type="text" name="model" [(ngModel)]="object.model" required>
+  </div>
+  <div>
+      <label for="dpi">DPI</label>
+      <input type="number" name="dpi" [(ngModel)]="object.dpi" min="1" required>
+  </div>
+  <input
+  type="submit"
+  name="submit"
+  id="submit"
+  value="Add mouse"
+  [disabled]="mouseForm.invalid"/>

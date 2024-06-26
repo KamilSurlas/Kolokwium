@@ -1,0 +1,22 @@
+<table *ngIf="isTable" border="1">
+  <thead>
+      <tr>
+          <th>Id</th>
+          <th>Model</th>
+          <th>DPI</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let m of mouses" [app-mouse-row]="m" (toDelete)="deleteMouse($event)"></tr>
+  </tbody>
+</table>
+<br>
+<button (click)="changeView()">
+  {{isTable ? 'Add Mouse' : 'Cancel Adding'}}
+</button>
+<div *ngIf="!isTable">
+  <app-form (submit)="onSubmit()">
+  </app-form>
+</div>
+
+

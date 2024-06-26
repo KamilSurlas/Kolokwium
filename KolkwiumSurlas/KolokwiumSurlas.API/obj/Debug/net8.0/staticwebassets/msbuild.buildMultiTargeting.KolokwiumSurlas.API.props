@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\KolokwiumSurlas.API.props" />
+</Project>
